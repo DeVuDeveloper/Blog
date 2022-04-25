@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20220425122740_add_author_to_likes.rb
