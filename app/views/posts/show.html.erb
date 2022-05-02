@@ -1,2 +1,18 @@
-<h1>Here is list of all posts for one user</h1>
+<section class="user-post-comments">
+  <div class="post-user flex-one">
+    <div class="user-flex">
+      <h3 class="post-title"><%= @post.title %> by <%= @user.name %></h3>
+        <small class="user-counters">
+          <p>Comments : <%= @post.comments.size%></p>
+          <p>Likes : <%= @post.likes.size %></p>
+        </small>
+    </div>
+    <p><%= @post.text %> </p>
+  </div>
+  <div class="comments-user">
+    <%= render "post_comments", post: @post %> 
+  </div>
+ <%= link_to "Back", :back , class: "back"%>
+</section>
+
 
