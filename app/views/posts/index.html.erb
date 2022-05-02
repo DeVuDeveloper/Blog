@@ -4,7 +4,9 @@
       <img class="user-img" src="<%= @user.photo %>" alt="<%= @user.name %>">
       <a class="link-to-user" href="/users/<%= @user.id %>"><%= @user.name %></a>
       <h4 class="posts-count">Posts(<%= @user.posts.size %>)</h4>
-      <%= link_to "New post", new_user_post_path(@user.id) %>
+        <% if current_user && current_user.id == @user.id %>
+     <%= link_to "New post", new_user_post_path(@user.id) %>
+    <% end %>
     </div>
    <ul class="posts-wrapper" >
       <% @user.all_posts.each do |post| %>
@@ -26,4 +28,3 @@
       <% end %>
     </ul>
   </section>
-

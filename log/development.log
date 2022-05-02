@@ -7454,3 +7454,167 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 78ms (Views: 59.8ms | ActiveRecord: 6.0ms | Allocations: 10745)
 
 
+Started GET "/" for ::1 at 2022-05-02 18:56:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/views/users/_user.html.erb:4
+  Rendered users/_user.html.erb (Duration: 23.5ms | Allocations: 11141)
+  [1m[36mPost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_user.html.erb:4
+  Rendered users/_user.html.erb (Duration: 2.9ms | Allocations: 810)
+  [1m[36mPost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_user.html.erb:4
+  Rendered users/_user.html.erb (Duration: 4.5ms | Allocations: 715)
+  Rendered users/index.html.erb within layouts/application (Duration: 106.9ms | Allocations: 19690)
+  Rendered layout layouts/application.html.erb (Duration: 1969.4ms | Allocations: 55902)
+Completed 200 OK in 2100ms (Views: 1972.2ms | ActiveRecord: 16.5ms | Allocations: 66105)
+
+
+Started GET "/users/1" for ::1 at 2022-05-02 18:56:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_user.html.erb:4
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 746)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mComment Count (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mLike Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/users/show.html.erb:17
+  [1m[36mComment Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mLike Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/users/show.html.erb:17
+  [1m[36mComment Count (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 160.6ms | Allocations: 16990)
+  Rendered layout layouts/application.html.erb (Duration: 165.9ms | Allocations: 19379)
+Completed 200 OK in 179ms (Views: 122.8ms | ActiveRecord: 50.2ms | Allocations: 21486)
+
+
+Started GET "/users/1/posts" for ::1 at 2022-05-02 18:56:24 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 5725)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 5822)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.6ms | Allocations: 11274)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x0000000000c648>
+Did you mean?  current_page?):
+    4:       <img class="user-img" src="<%= @user.photo %>" alt="<%= @user.name %>">
+    5:       <a class="link-to-user" href="/users/<%= @user.id %>"><%= @user.name %></a>
+    6:       <h4 class="posts-count">Posts(<%= @user.posts.size %>)</h4>
+    7:         <% if current_user && current_user.id == @user.id %>
+    8:      <%= link_to "New post", new_user_post_path(@user.id) %>
+    9:     <% end %>
+   10:     </div>
+  
+app/views/posts/index.html.erb:7
+Started GET "/users/1/posts" for ::1 at 2022-05-02 18:58:39 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3071)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 3155)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 8.3ms | Allocations: 17252)
+
+
+  
+ActionView::Template::Error (Missing partial posts/_user, application/_user with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/dejan/Desktop/Blog/app/views"
+  * "/home/dejan/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/actiontext-7.0.2.3/app/views"
+  * "/home/dejan/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/actionmailbox-7.0.2.3/app/views"
+
+Did you mean?  users/user
+               posts/most_recent_comments
+               posts/post_comments
+               likes/like
+               action_text/contents/content
+               layouts/action_text/contents/content):
+    1: <section class="user-wrapper">
+    2:   <%= link_to "See all posts", user_posts_path(@user.id), class: "link-to-all-posts" %>
+    3:   <%= render "user", user: @user %>
+    4:   <div class="bio-wrapper flex-one">
+    5:     <h3 class="bio">Bio</h3>
+    6:     <p><%= @user.bio %> </p>
+  
+app/views/posts/index.html.erb:3
+Started GET "/users/1/posts" for ::1 at 2022-05-02 18:59:52 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 4872)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4957)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.3ms | Allocations: 7739)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x00000000011800>
+Did you mean?  current_page?):
+    4:       <img class="user-img" src="<%= @user.photo %>" alt="<%= @user.name %>">
+    5:       <a class="link-to-user" href="/users/<%= @user.id %>"><%= @user.name %></a>
+    6:       <h4 class="posts-count">Posts(<%= @user.posts.size %>)</h4>
+    7:         <% if current_user && current_user.id == @user.id %>
+    8:      <%= link_to "New post", new_user_post_path(@user.id) %>
+    9:     <% end %>
+   10:     </div>
+  
+app/views/posts/index.html.erb:7
+Started GET "/users/1/posts" for ::1 at 2022-05-02 19:01:28 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4339)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 4423)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 23.6ms | Allocations: 18189)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x00000000016350>
+Did you mean?  current_page?):
+    4:       <img class="user-img" src="<%= @user.photo %>" alt="<%= @user.name %>">
+    5:       <a class="link-to-user" href="/users/<%= @user.id %>"><%= @user.name %></a>
+    6:       <h4 class="posts-count">Posts(<%= @user.posts.size %>)</h4>
+    7:         <% if current_user && current_user.id == @user.id %>
+    8:      <%= link_to "New post", new_user_post_path(@user.id) %>
+    9:     <% end %>
+   10:     </div>
+  
+app/views/posts/index.html.erb:7

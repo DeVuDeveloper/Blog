@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = User.includes(:posts).find(params[:user_id])
   end
 
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    @post = @user.posts.includes(:comments, :likes).find(params[:id])
   end
 
   def new
@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = 'The post have been created successfully.'
-      redirect_to user_path(@post.author_id, @post.id)
+      redirect_to user_posts_path(@post.author_id, @post.id)
     else
       flash[:alert] = 'Adding a new post failed.'
       render :new, status: :unprocessable_entity
@@ -27,6 +27,8 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:author_id, :title, :text).tap do |post_params|
+      post_params.require(:text)
+    end
   end
 end
