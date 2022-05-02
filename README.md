@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Blog App
- **Under the construction**
+ *Under the construction*
 
 
 <!-- ## Blog App screenshot
