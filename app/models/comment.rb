@@ -5,8 +5,6 @@ class Comment < ApplicationRecord
   after_save :update_comments_counter
 
   def update_comments_counter
-    @posts.each do |post|
-      post.update_column(:comments_counter, post.comments.count) if post.id == post_id
-    end
+    post.increment!(:comments_counter)
   end
 end
