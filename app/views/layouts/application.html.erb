@@ -13,7 +13,7 @@
   <body>
   <div>
   <% if notice %>
-      <h6 class="alert alert-success text-center msg"><%= notice %></h6>
+      <h6 class="alert alert-success text-center msg"><%= flash[:notice]%></h6>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
