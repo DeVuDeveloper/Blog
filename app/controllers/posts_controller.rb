@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
     @current_user = current_user
   end
 

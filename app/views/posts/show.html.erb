@@ -9,10 +9,10 @@
     </div>
     <p><%= @post.text %> </p>
   </div>
-  <%= render "likes/like" %>
+  <%= render "likes/new" %>
   <div class="comments-user">
    <%= render "post_comments", post: @post %> 
-   <%= render "comments/comment_form" %>
+   <%= render "comments/new" %>
   </div>
   <%= link_to "Back", :back , class: "back"%>
 </section>
