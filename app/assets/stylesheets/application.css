@@ -34,7 +34,6 @@ a:-webkit-any-link {
   flex-direction: column;
   width: 80vh;
   margin-bottom: 20px;
-
   padding: 0 20px;
 }
 
@@ -193,10 +192,6 @@ a:-webkit-any-link {
 .posts {
   background-color: #142833;
   padding: 2px 16px;
-}
-
-.posts h3 {
-  color: #ebeff3;
 }
 
 .posts h3:hover {
