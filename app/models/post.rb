@@ -10,8 +10,6 @@ end
 
 after_save :update_posts_counter
 
-private
-
 def update_posts_counter
   @users.each do |user|
     user.update_column(:posts_counter, user.posts.count) if user.id == author_id
