@@ -8,6 +8,8 @@ class Post < ApplicationRecord
   end
 end
 
+after_save :update_posts_counter
+
 private
 
 def update_posts_counter
