@@ -1,6 +1,6 @@
 <section class="post-form">
   <h3 class="form-title"> Add Your Post</h3>
-  <%= form_with model:[@current_user, @current_user.posts.new], method: :post, local: true do |f| %>
+  <%= form_with model:[@current_user, @post], method: :post, local: true do |f| %>
     <div class="form-group">
       <%= f.label :title, "Title", class: "col-sm-2 control-label" %>
     <div class="input col-sm-10">
