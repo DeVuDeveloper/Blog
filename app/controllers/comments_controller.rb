@@ -22,10 +22,10 @@ class CommentsController < ApplicationController
     @post.comments_counter -= 1
     @comment.destroy!
     @post.save
-    flash[:alert] = 'You have deleted this post successfully!'
+    flash[:alert] = 'You have deleted this comment successfully!'
     redirect_to user_posts_path(@post.author_id)
   end
-  
+
   private
 
   def comment_params
