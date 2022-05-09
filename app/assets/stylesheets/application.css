@@ -545,3 +545,35 @@ span {
     border-radius: 6px;
   }
 }
+.delete-post {
+  color: rgb(226, 4, 4);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+  background-color: #45a29e;
+}
+
+.delete-post:hover {
+  color: #fff;
+  background-color: #c52c21;
+}
+
+.delete-comment {
+  color: rgb(189, 82, 82);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+ 
+}
+
+.delete-comment:nth-child(odd){ 
+  color: rgb(233, 128, 128);
+ 
+}
+
+.delete-comment:hover {
+  color: #fff;
+  background-color: #ca6b64;
+}
