@@ -327,7 +327,7 @@ a:-webkit-any-link {
 }
 
 .btn-post {
-  padding: 3px 7px;<% provide(:title, "Edit user") %>
+  padding: 3px 7px;
 }
 
 .btn-post:hover {
@@ -385,23 +385,6 @@ a:-webkit-any-link {
 
 .h-custom {
   height: calc(100% - 73px);
-}
-
-@media (max-width: 450px) {
-  .h-custom {.login {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    background-color: #45a29e;
-    margin-bottom: 50px;
-    width: 100%;
-    margin-top: 30px;
-  }
-    height: 100%;
-  }
 }
 
 .card-body1 {
