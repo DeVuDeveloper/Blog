@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
     @user = User.includes(:posts).find(params[:user_id])
     @current_user = current_user
