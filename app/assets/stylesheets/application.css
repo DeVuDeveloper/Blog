@@ -256,6 +256,11 @@ a:-webkit-any-link {
   background-color: #45a29e;
 }
 
+.comments li {
+  display: flex;
+  justify-content: space-between;
+}
+
 .comments li:nth-child(odd) {
   background-color: #142833;
 }
@@ -323,8 +328,6 @@ a:-webkit-any-link {
 
 .btn-post {
   padding: 3px 7px;
-  color: #fff;
-  background-color: #45a29e;
 }
 
 .btn-post:hover {
@@ -357,6 +360,7 @@ a:-webkit-any-link {
   background-color: #45a29e;
   margin-bottom: 50px;
   width: 100%;
+  border: 4px solid rgb(60, 125, 129);
 }
 
 .logout {
@@ -383,12 +387,6 @@ a:-webkit-any-link {
   height: calc(100% - 73px);
 }
 
-@media (max-width: 450px) {
-  .h-custom {
-    height: 100%;
-  }
-}
-
 .card-body1 {
   width: 400px;
   height: auto;
@@ -397,12 +395,6 @@ a:-webkit-any-link {
   position: relative;
   top: 30vh;
   left: 40%;
-}
-
-form {
-  padding-top: 10px;
-  font-size: 13px;
-  margin-top: 30px;
 }
 
 .card-title {
@@ -544,4 +536,40 @@ span {
     width: 100%;
     border-radius: 6px;
   }
+}
+
+.delete-post {
+  color: rgb(226, 4, 4);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+  background-color: #45a29e;
+}
+
+.delete-post:hover {
+  color: #fff;
+  background-color: #c52c21;
+}
+
+.delete-comment {
+  color: rgb(189, 82, 82);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+}
+
+.delete-comment:nth-child(odd) {
+  color: rgb(233, 128, 128);
+}
+
+.delete-comment:hover {
+  color: #fff;
+  background-color: #ca6b64;
+}
+
+.edit {
+  margin-left: 30%;
+  margin-top: 20%;
 }

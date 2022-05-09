@@ -14,6 +14,7 @@
 
   <div class="login">
  <% if user_signed_in? %>
+  <strong><%= current_user.role %></strong>
   <strong><%= current_user.name %></strong>
   <strong><%= current_user.email %></strong>
    <%= link_to 'All users', root_path %>
@@ -24,9 +25,9 @@
   <%= link_to "Sign up", new_user_registration_path %> 
   <%= link_to "Login", new_user_session_path %>
 <% end %>
-
 </div>
   <div>
+  
   <% if notice %>
       <h6 class="alert alert-success text-center msg"><%= flash[:notice]%></h6>
     <% end %>
