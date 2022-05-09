@@ -558,12 +558,10 @@ span {
   background: transparent;
   font-weight: 900;
   padding: 3px 7px;
- 
 }
 
-.delete-comment:nth-child(odd){ 
+.delete-comment:nth-child(odd) { 
   color: rgb(233, 128, 128);
- 
 }
 
 .delete-comment:hover {
