@@ -270,12 +270,6 @@ a:-webkit-any-link {
   gap: 10px;
 }
 
-.link-to-login a {
-  text-decoration: none;
-  color: rgb(22, 21, 21);
-  font-weight: 700;
-}
-
 .all-users-link {
   padding: 3px 7px;
   background-color: #45a29e;
