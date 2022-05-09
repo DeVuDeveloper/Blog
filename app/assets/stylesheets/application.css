@@ -79,6 +79,12 @@ a:-webkit-any-link {
   color: #fff;
 }
 
+.link-to-login a {
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+  font-weight: 700;
+}
+
 .user a:nth-child(4) {
   color: #b4c7c6;
   font-size: 22px;
@@ -87,12 +93,6 @@ a:-webkit-any-link {
 
 .user h4 {
   color: #fff;
-}
-
-.link-to-login a {
-  text-decoration: none;
-  color: rgb(22, 21, 21);
-  font-weight: 700;
 }
 
 .user a:hover {
@@ -268,6 +268,10 @@ a:-webkit-any-link {
 .user-counters {
   display: flex;
   gap: 10px;
+}.link-to-login a {
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+  font-weight: 700;
 }
 
 .all-users-link {
@@ -352,14 +356,12 @@ a:-webkit-any-link {
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  width: 80vh;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   background-color: #45a29e;
   margin-bottom: 50px;
   width: 100%;
 }
-
 
 .logout {
   padding: 3px 7px;
@@ -453,7 +455,7 @@ span {
   border-radius: 4px;
 }
 
-.main-verification-input:before {
+.main-verification-input::before {
   content: '';
   position: absolute;
   bottom: -40px;
@@ -532,7 +534,6 @@ span {
     width: 100%;
     border: 1px solid #eee;
     height: 50px;
-    border: none;
     margin-bottom: 10px;
   }
 
