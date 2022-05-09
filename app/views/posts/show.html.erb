@@ -1,4 +1,5 @@
 <section class="user-post-comments">
+<%= button_to "Delete", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete, class: 'delete-post' if can? :destroy, @post %>
   <div class="post-user flex-one">
     <div class="user-flex">
       <h3 class="post-title"><%= @post.title %> by <%= @user.name %></h3>
@@ -16,3 +17,4 @@
   </div>
   <%= link_to "Back", :back , class: "back"%>
 </section>
+
