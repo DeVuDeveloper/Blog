@@ -330,3 +330,34 @@ a:-webkit-any-link {
 ::placeholder {
   padding-left: 5px;
 }
+
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  width: 80vh;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #45a29e;
+  margin-bottom:50px;
+  width: 100%;
+}
+
+.login a {
+  color: #fff;
+}
+
+.logout {
+  padding: 3px 7px;
+  color: #fff;
+  background-color: #45a29e;
+  margin-top: 50px;
+}
+
+.logout:hover {
+  color: rgb(122, 16, 16);
+  background-color: #deebea;
+}
+
