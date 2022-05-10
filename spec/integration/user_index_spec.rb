@@ -49,9 +49,9 @@ RSpec.feature 'Tests for user-index page', type: :feature do
       expect(page.first('img')['src']).to have_content 'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png'
     end
 
-    it "When I click on a user, I am redirected to that user's show page" do
+    scenario "if I click on a user, I am redirected to that user's show page" do
       click_on 'John', match: :first
-      expect(current_path).to eq user_path User.first.id
+      expect(current_path).to eq user_path @user1.id
     end
   end
 end

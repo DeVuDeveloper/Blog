@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Testing posts/index page', type: :feature do
   describe 'current user session test' do
     before(:each) do
-      @user1 = User.create(name: 'John', photo: 'photo', bio: 'Teacher from Mexico.', email: 'john@gmail.com',
+      @user1 = User.create(name: 'John', photo: 'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png',
+                           bio: 'Teacher from Mexico.', email: 'john@gmail.com',
                            password: 'johnsecret', confirmed_at: Time.now, post_counter: 0)
       @user2 = User.create(name: 'Nuri', photo: 'photo', bio: 'Teacher from Mexico.', email: 'photo@gmail.com',
                            password: 'nurisecret', confirmed_at: Time.now, post_counter: 0)
@@ -59,6 +60,15 @@ RSpec.describe 'Testing posts/index page', type: :feature do
 
     scenario 'if page has link' do
       expect(page.has_link?('All users')).to be true
+    end
+
+    scenario 'I can see the user profile.' do
+      expect(page.first('img')['src']).to have_content 'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png'
+    end
+
+    it "if I click on a post, it redirects me to that post's show page." do
+      click_on 'Testing with capybara'
+      expect(current_path).to eq user_post_path user_id: @user1.id, id: @post1.id
     end
   end
 end
