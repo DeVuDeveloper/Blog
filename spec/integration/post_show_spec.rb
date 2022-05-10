@@ -59,5 +59,17 @@ RSpec.describe 'Testing posts/show page', type: :feature do
     scenario 'if page has link' do
       expect(page.has_button?('Delete')).to be true
     end
+
+    scenario 'if I can see the username of each commentor.' do
+      expect(page).to have_content 'John'
+      expect(page).to have_content 'Nuri'
+      expect(page).to have_content 'Rachid'
+    end
+
+    scenario 'if I can see the comment each commentor left.' do
+      expect(page).to have_content 'test comment 1'
+      expect(page).to have_content 'test comment 2'
+      expect(page).to have_content 'test comment 3'
+    end
   end
 end
