@@ -3,16 +3,13 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'For the Post model' do
     before(:each) do
-      @user = User.new(name: 'John', bio: 'Teacher from Dubai', posts_counter: 0)
-      @post = Post.new(author: @user, title: 'Test', text: 'testing', likes_counter: 7, comments_counter: 5)
+      @user = User.create(name: 'John', bio: 'Teacher from Dubai', post_counter: 0, confirmed_at: Time.now,
+                          email: 'some@mail.com', password: '111111')
+      @post = Post.create(author: @user, title: 'Test', text: 'testing', likes_counter: 7,
+                          comments_counter: 5)
     end
 
     before { @post.save }
-
-    it 'if there is title' do
-      @post.title = true
-      expect(@post).to be_valid
-    end
 
     it 'if there is max 250 characters' do
       @post.title = 'Testing'
