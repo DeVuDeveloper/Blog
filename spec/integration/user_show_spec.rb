@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Tests for user/show page', type: :feature do
   before(:each) do
-    @user = User.create(name: 'John', photo: 'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png', bio: 'Teacher from Mexico.', email: 'john@gmail.com',
+    @user = User.create(name: 'John', photo: 'https://i.kinja-img.com/gawker-media/image/upload/t_original/ijsi5fzb1nbkbhxa2gc1.png',
+                        bio: 'Teacher from Mexico.', email: 'john@gmail.com',
                         password: 'johnsecret', confirmed_at: Time.now, post_counter: 0, role: 'admin')
     Post.create(title: 'Testing1 with capybara', text: 'test for views', author_id: @user.id)
     Post.create(title: 'Testing2 with capybara', text: 'test for views', author_id: @user.id)
