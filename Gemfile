@@ -86,3 +86,5 @@ gem 'cancancan'
 gem 'rack-cors'
 
 gem 'devise-jwt'
+
+gem 'dotenv-rails', groups: [:development, :test]
