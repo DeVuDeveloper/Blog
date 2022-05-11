@@ -87,4 +87,4 @@ gem 'rack-cors'
 
 gem 'devise-jwt'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
