@@ -1,11 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Blog App
- *Under the construction*
 
 
-<!-- ## Blog App screenshot
-![Screenshot](img/screenshot.png) -->
+## Live preview
+  ## Heroku [link])
+
+
+## Blog App screenshot
+![Screenshot](img/screenshot.png)
 
 
 ## General info
