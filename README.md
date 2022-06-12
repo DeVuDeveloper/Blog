@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Blog App
-
+Amazing Blog app made with Ruby on Rails. User can make posts, comments and likes on posts of other users. Also user can delete posts and comments created by user. User can edit profile and delete account if not happy. For creating posts and comments user must login. Admin can manage all.
 
 ## Live preview
-  ## Heroku [link])
+  ## Heroku [link](https://blog-dejan-rails.herokuapp.com/)
 
 
 ## Blog App screenshot
-![Screenshot](img/screenshot.png)
+![Screenshot](app/assets/images/screenshot.jpg)
 
 
 ## General info
@@ -18,6 +18,7 @@ This is project made with Ruby on Rails.
 Project is created with:
 * Language - Ruby
 * Framework - Ruby on Rails
+* PostgreSQL
 
 ## Setup
 To run this project, install it locally using:
