@@ -1,0 +1,6 @@
+<div class="user">
+  <img class="user-img" src="<%= user.photo %>" alt="<%= user.name %>">
+  <a class="link-to-user" href="/users/<%= user.id %>"><%= user.name %></a>
+  <h4 class="posts-count">Posts(<%= user.posts.size %>)</h4>
+  <%= link_to "admin settings", edit_user_path(user.id) if can? :update, user   %>
+</div>

@@ -1,24 +1,61 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog App
+Amazing Blog app made with Ruby on Rails. User can make posts, comments and likes on posts of other users. Also user can delete posts and comments created by user. User can edit profile and delete account if not happy. For creating posts and comments user must login. Admin can manage all.
 
-Things you may want to cover:
+## Live preview
+  ## Heroku [link](https://blog-dejan-rails.herokuapp.com/)
 
-* Ruby version
 
-* System dependencies
+## Blog App screenshot
+![Screenshot](app/assets/images/screenshot.jpg)
 
-* Configuration
 
-* Database creation
+## General info
+This is project made with Ruby on Rails.
 
-* Database initialization
+ ## Technologies
+Project is created with:
+* Language - Ruby
+* Framework - Ruby on Rails
+* PostgreSQL
 
-* How to run the test suite
+## Setup
+To run this project, install it locally using:
+- cd Desktop
+- git clone https://github.com/VuDej/Blog.git
+- cd Blog
+- bundle install
+- rails server
+- in your browser open url : https://localhost:3000 to view the app.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Author
 
-* Deployment instructions
+👤 **Dejan Vujovic**
 
-* ...
+- Github : [@VuDej](https://github.com/VuDej)
+- Twitter: [@DejanVuj](https://twitter.com/DejanVuj)
+- LinkedIn : [@Dejan-Vujovic](https://www.linkedin.com/in/dejan-vujovic-5a0672225/)
+
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/VuDej/School-Library-Ruby/issues/1).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+A special thanks to Microverse.
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+## Contact
+Created by [@VuDej](https://github.com/VuDej)
