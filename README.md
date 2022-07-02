@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Blog App
 Amazing Blog app made with Ruby on Rails. User can make posts, comments and likes on posts of other users. Also user can delete posts and comments created by user. User can edit profile and delete account if not happy. For creating posts and comments user must login. Admin can manage all.
 
@@ -48,10 +46,6 @@ Feel free to check the [issues page](https://github.com/VuDej/School-Library-Rub
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-A special thanks to Microverse.
 
 ## 📝 License
 
