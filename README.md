@@ -2,7 +2,7 @@
 Amazing Blog app made with Ruby on Rails. User can make posts, comments and likes on posts of other users. Also user can delete posts and comments created by user. User can edit profile and delete account if not happy. For creating posts and comments user must login. Admin can manage all.
 
 ## Live preview
-  ## Under construction
+  Under construction
 
 
 ## Blog App screenshot
